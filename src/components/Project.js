@@ -4,7 +4,9 @@ class Project extends React.Component {
 
     render() {
         return (
-            <h1>Project</h1>
+            <div>
+                <h3>Project {this.props.project.id}</h3>
+            </div>
         )
     }
 

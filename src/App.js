@@ -1,10 +1,15 @@
 import React from 'react';
-import Project from './components/Project'
+import Header from './components/Header';
+import ProjectList from './components/ProjectList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Project/>    
+      <Header/>
+      <div className="py-5" id="test">
+        <ProjectList/>
+      </div>
     </div>
   );
 }
