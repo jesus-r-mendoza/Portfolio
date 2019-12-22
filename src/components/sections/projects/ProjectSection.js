@@ -5,7 +5,7 @@ class ProjectSection extends React.Component {
 
     render() {
         return (
-            <div id="test" className="section">
+            <div id="projects" className="section">
                 <h2>Projects</h2>
                 <ProjectList />
             </div>
