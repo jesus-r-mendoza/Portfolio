@@ -21,9 +21,36 @@ code {
 .section {
   padding-top: 4em;
   border-bottom: 2px solid;
-  margin: 20em 0;
 }
 
 .content {
-  margin: 0 4em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#name {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  padding: .5em;
+  margin: .5em;
+}
+
+#details {
+  padding: 1em;
+  margin: 3em 0;
+}
+
+#info {
+  width: 55%;
+}
+
+#img {
+  width: 230px;
+  height: 250px;
+  background-color: black;
+}
+
+#desc {
+  margin-bottom: 1em;
 }
