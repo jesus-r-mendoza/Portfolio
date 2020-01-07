@@ -2,8 +2,8 @@ import React from 'react'
 
 function Name() {
     return (
-        <div>
-            <h1 id="name">Jesus R Mendoza</h1>
+        <div className="my-5">
+            <h1 className="display-3 text-center text-white">Jesus R Mendoza</h1>
         </div>
     )
 }

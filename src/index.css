@@ -28,31 +28,10 @@ code {
   width: 80%;
 }
 
-#name {
-  color: white;
-  font-size: 4rem;
-  text-align: center;
-  padding: .5em;
-  margin: .5em;
-}
-
-#details {
-  padding: 1em;
-  margin: 3em 0;
-}
-
-#info {
-  width: 55%;
-}
-
 #img {
   width: 230px;
   height: 250px;
   background-color: black;
-}
-
-#desc {
-  margin-bottom: 1em;
 }
 
 #icon {
