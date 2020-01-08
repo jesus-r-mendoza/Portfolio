@@ -1,4 +1,5 @@
 import React from 'react';
+import Overview from './Overview';
 
 class ExperienceSection extends React.Component {
 
@@ -6,6 +7,7 @@ class ExperienceSection extends React.Component {
         return (
             <div id="experience" className="section">
                 <h2>Academic Internship</h2>
+                <Overview />
             </div>
         )
     }
