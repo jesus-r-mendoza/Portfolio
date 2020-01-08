@@ -28,6 +28,10 @@ code {
   width: 80%;
 }
 
+.summary {
+  width: 20em;
+}
+
 #img {
   width: 230px;
   height: 250px;
