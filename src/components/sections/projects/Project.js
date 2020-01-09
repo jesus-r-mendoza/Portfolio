@@ -26,7 +26,7 @@ class Project extends React.Component {
                         <h4>{this.props.project.id * 5}</h4>
                     </div>
                 </div>
-                <a href="#projects" className="btn btn-sm btn-outline-primary mt-3 w-75 mx-auto">View Source Code</a>
+                <a href="#projects" className="btn btn-outline-primary my-1 w-75 mx-auto">View Source Code</a>
             </div>
         )
     }

@@ -18,6 +18,18 @@ class ProjectList extends React.Component {
                 {
                     id: 3,
                     name: 'Proj 3'
+                },
+                {
+                    id: 4,
+                    name: 'Proj 4'
+                },
+                {
+                    id: 5,
+                    name: 'Proj 5'
+                },
+                {
+                    id: 6,
+                    name: 'Proj 6'
                 }
             ]
         };
@@ -25,7 +37,7 @@ class ProjectList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="d-flex flex-wrap justify-content-between my-3">
                 {this.state.projects.map((p) => <Project project={p}/>)}
             </div>
         )
