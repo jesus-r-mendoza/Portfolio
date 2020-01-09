@@ -32,6 +32,20 @@ code {
   width: 20em;
 }
 
+.project-card {
+  width: 23rem;
+  height: 32rem;
+  border: 2px solid;
+  padding: 2em;
+  margin: 1em 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: #fff;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .15);
+}
+
 #img {
   width: 230px;
   height: 250px;
