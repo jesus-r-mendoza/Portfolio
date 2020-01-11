@@ -37,6 +37,19 @@ class ProjectList extends React.Component {
         };
     }
 
+    componentDidMount() {
+        fetch('https://api.github.com/users/jesus-r-mendoza/repos?sorted=created')
+        .then(res => res.json())
+        .then(
+            (result) => {
+                console.log(result);
+            },
+            (error) => {
+                console.log(error)
+            }
+        );
+    }
+
     render() {
         return (
             <div className="d-flex flex-wrap justify-content-between my-3">
