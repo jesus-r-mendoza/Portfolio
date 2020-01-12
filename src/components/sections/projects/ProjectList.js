@@ -28,7 +28,7 @@ class ProjectList extends React.Component {
     }
 
     render() {
-        if ( this.state.haveLoaded != this.state.pinnedRepos.length ) {
+        if ( this.state.haveLoaded !== this.state.pinnedRepos.length ) {
             return (
                 <div className="d-flex flex-column align-items-center">
                     <div className="d-flex justify-content-center align-items-center my-4">
@@ -42,7 +42,7 @@ class ProjectList extends React.Component {
         }
         return (
             <div className="d-flex flex-wrap justify-content-between my-3">
-                {this.state.projects.map((p) => <Project project={p}/>)}
+                {this.state.projects.map((p) => <Project key={p.id} project={p}/>)}
             </div>
         )
     }
@@ -60,7 +60,7 @@ class ProjectList extends React.Component {
             projects: this.state.projects.concat(data)
         });
 
-        if ( this.state.haveLoaded == this.state.pinnedRepos.length - 1 ) {
+        if ( this.state.haveLoaded === this.state.pinnedRepos.length - 1 ) {
             // this means the project just added was the last api call to finish
             this.sort();
         }
@@ -83,6 +83,7 @@ function getDataFromRepo(repo, stats) {
     let data = {};
     data.id = repo.id;
     data.name = repo.name.replace(/-/g, " ");
+    data.url = repo.svn_url;
     data.updated_date = new Date(repo.updated_at);
     data.updated = data.updated_date.toLocaleDateString('en-US');
     if (!repo.language) {

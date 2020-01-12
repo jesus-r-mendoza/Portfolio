@@ -30,7 +30,7 @@ class Project extends React.Component {
                         <h6>{this.props.project.updated}</h6>
                     </div>
                 </div>
-                <a href="#projects" className="btn btn-outline-primary my-1 w-75 mx-auto">View Source Code</a>
+                <a href={this.props.project.url} className="btn btn-outline-primary my-1 w-75 mx-auto" target="_blank" rel="noopener noreferrer">View Source Code</a>
             </div>
         )
     }
