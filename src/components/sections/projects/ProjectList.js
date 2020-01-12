@@ -49,16 +49,7 @@ class ProjectList extends React.Component {
     }
 
     componentDidMount() {
-        fetch(repoAPI + 'Operations-Data-and-Mgmt-System')
-        .then(res => res.json())
-        .then(
-            (result) => {
-                getDataFromRepo(result);
-            },
-            (error) => {
-                console.log(error)
-            }
-        );
+        api();
     }
 
     render() {
@@ -71,33 +62,35 @@ class ProjectList extends React.Component {
 
 }
 
-function getDataFromRepo(response) {
-    console.log('--------------------------------------');
-    console.log(response.name);
-    console.log(response.updated_at);
-    if (!response.language) {
+async function api() {
+    let repo, stats;
+    let repoRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System');
+    let statsRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System' + statsAPI);
+
+    repo = await repoRes.json();
+    stats = await statsRes.json();
+    console.log('printing');
+
+    console.log(repo);
+    console.log(stats);
+}
+
+function getDataFromRepo(repo, stats) {
+    let data = {};
+    data.name = repo.name.replace(/-/g, " ");
+    data.date = new Date(repo.updated_at).toLocaleDateString('en-US');
+    if (!repo.language) {
         try {
-            console.log(response.parent.language);
+            data.lang = repo.parent.language;
         } catch(e) {
-            console.log('View repo for more details');
+            data.lang = 'View on Github';
         }
     } else {
-        console.log(response.language);
+        data.lang = repo.language;
     }
-    fetch(repoAPI + 'Operations-Data-and-Mgmt-System' + statsAPI)
-    .then(res => res.json())
-    .then(
-        (result) => {
-            console.log(result);
-            console.log(result.length);
-            let x = result.reduce((sum, contributor) => sum + contributor.total, 0);
-            console.log(x);
-        },
-        (error) => {
-            console.log(error);
-        }
-    );
-    console.log('--------------------------------------');
+    data.contributors = stats.length;
+    data.commits = stats.reduce((sum, contributor) => sum + contributor.total, 0);
+    return data;
 }
 
 export default ProjectList;
