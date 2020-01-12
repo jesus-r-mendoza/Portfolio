@@ -67,7 +67,7 @@ function getDataFromRepo(repo, stats) {
     let data = {};
     data.id = repo.id;
     data.name = repo.name.replace(/-/g, " ");
-    data.date = new Date(repo.updated_at).toLocaleDateString('en-US');
+    data.updated = new Date(repo.updated_at).toLocaleDateString('en-US');
     if (!repo.language) {
         try {
             data.language = repo.parent.language;
