@@ -49,7 +49,7 @@ class ProjectList extends React.Component {
     }
 
     componentDidMount() {
-        api();
+        this.api();
     }
 
     render() {
@@ -60,33 +60,34 @@ class ProjectList extends React.Component {
         )
     }
 
-}
+    api = async () => {
+        let repoRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System');
+        let statsRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System' + statsAPI);
 
-async function api() {
-    let repo, stats;
-    let repoRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System');
-    let statsRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System' + statsAPI);
+        let repo = await repoRes.json();
+        let stats = await statsRes.json();
 
-    repo = await repoRes.json();
-    stats = await statsRes.json();
-    console.log('printing');
+        let data = getDataFromRepo(repo, stats);
 
-    console.log(repo);
-    console.log(stats);
+        this.setState({
+            projects: this.state.projects.concat(data)
+        });
+    }
 }
 
 function getDataFromRepo(repo, stats) {
     let data = {};
+    data.id = repo.id;
     data.name = repo.name.replace(/-/g, " ");
     data.date = new Date(repo.updated_at).toLocaleDateString('en-US');
     if (!repo.language) {
         try {
-            data.lang = repo.parent.language;
+            data.language = repo.parent.language;
         } catch(e) {
-            data.lang = 'View on Github';
+            data.language = 'View on Github';
         }
     } else {
-        data.lang = repo.language;
+        data.language = repo.language;
     }
     data.contributors = stats.length;
     data.commits = stats.reduce((sum, contributor) => sum + contributor.total, 0);
