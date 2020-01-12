@@ -57,8 +57,24 @@ class ProjectList extends React.Component {
         let data = getDataFromRepo(repo, stats);
 
         this.setState({
-            projects: this.state.projects.concat(data),
+            projects: this.state.projects.concat(data)
+        });
+
+        if ( this.state.haveLoaded == this.state.pinnedRepos.length - 1 ) {
+            // this means the project just added was the last api call to finish
+            this.sort();
+        }
+
+        this.setState({
             haveLoaded: this.state.haveLoaded + 1
+        });
+    }
+
+    sort = () => {
+        let sorted = this.state.projects.slice();
+        sorted.sort((a,b) => a.updated_date < b.updated_date);
+        this.setState({
+            projects: sorted
         });
     }
 }
@@ -67,7 +83,8 @@ function getDataFromRepo(repo, stats) {
     let data = {};
     data.id = repo.id;
     data.name = repo.name.replace(/-/g, " ");
-    data.updated = new Date(repo.updated_at).toLocaleDateString('en-US');
+    data.updated_date = new Date(repo.updated_at);
+    data.updated = data.updated_date.toLocaleDateString('en-US');
     if (!repo.language) {
         try {
             data.language = repo.parent.language;
