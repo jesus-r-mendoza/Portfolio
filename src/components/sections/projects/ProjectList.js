@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './Project';
+import Spinner from 'react-bootstrap/Spinner'
 
 const repoAPI = 'https://api.github.com/repos/jesus-r-mendoza/';
 const statsAPI = '/stats/contributors';
@@ -17,42 +18,28 @@ class ProjectList extends React.Component {
                 'OS-File-Management-System',
                 'RSA-Encryption'
             ],
-            error: null,
-            isLoaded: false,
-            projects: [
-                {
-                    id: 1,
-                    name: 'Proj 1'
-                },
-                {
-                    id: 2,
-                    name: 'Proj 2'
-                },
-                {
-                    id: 3,
-                    name: 'Proj 3'
-                },
-                {
-                    id: 4,
-                    name: 'Proj 4'
-                },
-                {
-                    id: 5,
-                    name: 'Proj 5'
-                },
-                {
-                    id: 6,
-                    name: 'Proj 6'
-                }
-            ]
+            haveLoaded: 0,
+            projects: []
         };
     }
 
     componentDidMount() {
-        this.api();
+        this.state.pinnedRepos.forEach((repo) => this.api(repo));
     }
 
     render() {
+        if ( this.state.haveLoaded != this.state.pinnedRepos.length ) {
+            return (
+                <div className="d-flex flex-column align-items-center">
+                    <div className="d-flex justify-content-center align-items-center my-4">
+                        <Spinner animation="border" />
+                        <h4 className="ml-3">Fetching most recent Data from the Github API</h4>
+                    </div>
+                    <h5 className="text-danger">Not Loading?  Give it a few seconds...</h5>
+                    <h5 className="text-danger">Or try refreshing the page.</h5>
+                </div>
+            )
+        }
         return (
             <div className="d-flex flex-wrap justify-content-between my-3">
                 {this.state.projects.map((p) => <Project project={p}/>)}
@@ -60,9 +47,9 @@ class ProjectList extends React.Component {
         )
     }
 
-    api = async () => {
-        let repoRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System');
-        let statsRes = await fetch(repoAPI + 'Operations-Data-and-Mgmt-System' + statsAPI);
+    api = async (repoName) => {
+        let repoRes = await fetch(repoAPI + repoName);
+        let statsRes = await fetch(repoAPI + repoName + statsAPI);
 
         let repo = await repoRes.json();
         let stats = await statsRes.json();
@@ -70,7 +57,8 @@ class ProjectList extends React.Component {
         let data = getDataFromRepo(repo, stats);
 
         this.setState({
-            projects: this.state.projects.concat(data)
+            projects: this.state.projects.concat(data),
+            haveLoaded: this.state.haveLoaded + 1
         });
     }
 }
