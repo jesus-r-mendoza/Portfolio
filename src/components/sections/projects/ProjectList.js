@@ -41,7 +41,7 @@ class ProjectList extends React.Component {
             )
         }
         return (
-            <div className="d-flex flex-wrap justify-content-between my-3">
+            <div className="d-flex flex-wrap justify-content-around my-3">
                 {this.state.projects.map((p) => <Project key={p.id} project={p}/>)}
             </div>
         )
@@ -54,7 +54,17 @@ class ProjectList extends React.Component {
         let repo = await repoRes.json();
         let stats = await statsRes.json();
 
-        let data = getDataFromRepo(repo, stats);
+        let data;
+
+        try {
+            data = getDataFromRepo(repo, stats);
+        } catch(e) {
+            // just ignore the project if error from api
+            this.setState({
+                haveLoaded: this.state.haveLoaded + 1
+            });
+            return;
+        }
 
         this.setState({
             projects: this.state.projects.concat(data)

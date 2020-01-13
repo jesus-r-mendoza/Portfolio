@@ -37,7 +37,7 @@ code {
   height: 32rem;
   border: 2px solid;
   padding: 1.3em 2em;
-  margin: 1em 0;
+  margin: 1em .25em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
