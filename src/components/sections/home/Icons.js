@@ -21,7 +21,7 @@ function Icons() {
                 </OverlayTrigger>
 
                 <OverlayTrigger placement="top"
-                    overlay={ <Tooltip>Let's connect LinkedIn</Tooltip> }>
+                    overlay={ <Tooltip>Let's connect on LinkedIn</Tooltip> }>
                     <a href="https://www.linkedin.com/in/jesus-r-mendoza" target="_blank" rel="noopener noreferrer" className="icon-link">
                         <i className="fab fa-linkedin icon"></i>
                     </a>
