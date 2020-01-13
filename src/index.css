@@ -52,8 +52,12 @@ code {
   background-color: black;
 }
 
-#icon {
+.icon {
   width: 50px;
   height: 50px;
   background-color: black;
+  font-size: 50px;
+}
+.icon:hover {
+  font-size: 60px;
 }
