@@ -9,7 +9,8 @@ class ProjectSection extends React.Component {
                 <h2>Projects</h2>
                 <ProjectList />
                 <div className="d-flex justify-content-center my-5">
-                   <a href="#projects" className="btn btn-lg btn-outline-info">View more projects on my Github ></a>
+                    <a href="https://github.com/jesus-r-mendoza?tab=repositories" target="_blank" rel="noopener noreferrer"
+                        className="btn btn-lg btn-outline-info">View more projects on my Github ></a>
                 </div>
             </div>
         )
