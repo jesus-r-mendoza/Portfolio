@@ -5,7 +5,7 @@ function Summaries() {
         <div className="d-flex justify-content-between flex-wrap my-5">
             <div className="summary">
                 <h5>Title</h5>
-                <p>
+                <p className="lead">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam eligendi maiore
                     s commodi animi unde nesciunt incidunt omnis voluptas ratione qui quisquam eum
                     nobis, veniam iusto non distinctio! Nam voluptates culpa laborum debitis minima a
@@ -16,7 +16,7 @@ function Summaries() {
             </div>
             <div className="summary">
                 <h5>Title</h5>
-                <p>
+                <p className="lead">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam eligendi maiore
                     s commodi animi unde nesciunt incidunt omnis voluptas ratione qui quisquam eum
                     nobis, veniam iusto non distinctio! Nam voluptates culpa laborum debitis minima a
@@ -27,7 +27,7 @@ function Summaries() {
             </div>
             <div className="summary">
                 <h5>Title</h5>
-                <p>
+                <p className="lead">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam eligendi maiore
                     s commodi animi unde nesciunt incidunt omnis voluptas ratione qui quisquam eum
                     nobis, veniam iusto non distinctio! Nam voluptates culpa laborum debitis minima a
