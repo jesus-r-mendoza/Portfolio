@@ -6,20 +6,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  background-image: url(img/bg.svg);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 150vw 100%;
+  background-color: #fcfcfc;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .section {
-  padding-top: 4em;
+  padding-top: 100px;
   border-bottom: 2px solid;
 }
 
@@ -35,6 +30,8 @@ code {
 .project-card {
   width: 23rem;
   height: 32rem;
+  min-width: 23rem;
+  min-height: 23rem;
   border: 2px solid;
   padding: 1.3em 2em;
   margin: 1em .25em;
@@ -51,6 +48,8 @@ code {
   height: 250px;
   background-color: black;
 }
+
+#home { padding-top: 70px; }
 
 .icon {
   width: 70px;
@@ -71,4 +70,43 @@ code {
   text-decoration: none;
   user-select: none;
   outline: none;
+}
+
+/* Header */
+
+nav {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+}
+
+.nav-content {
+    width: 100%;
+    height: 100%;
+    padding: 0 2em;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+}
+
+.link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: black;
+    border-bottom: 2px solid #fcfcfc;
+}
+
+.link:hover {
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    color: black;
+    border-bottom: 2px solid black;
 }
