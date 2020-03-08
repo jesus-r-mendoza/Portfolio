@@ -3,7 +3,7 @@ import Project from './Project';
 import Spinner from 'react-bootstrap/Spinner'
 
 const repoAPI = 'https://api.github.com/repos/jesus-r-mendoza/';
-const statsAPI = '/stats/contributors';
+const statsAPI = '/contributors?anon=1';
 
 class ProjectList extends React.Component {
 
@@ -94,7 +94,7 @@ function getDataFromRepo(repo, stats) {
     data.id = repo.id;
     data.name = repo.name.replace(/-/g, " ");
     data.url = repo.svn_url;
-    data.updated_date = new Date(repo.updated_at);
+    data.updated_date = new Date(repo.pushed_at);
     data.updated = data.updated_date.toLocaleDateString('en-US');
     if (!repo.language) {
         try {
@@ -105,8 +105,15 @@ function getDataFromRepo(repo, stats) {
     } else {
         data.language = repo.language;
     }
-    data.contributors = stats.length;
-    data.commits = stats.reduce((sum, contributor) => sum + contributor.total, 0);
+    let commits = 0;
+    let contribs = 0;
+    stats.forEach((user) => {
+        commits += user.contributions;
+        if ( user.type !== "Anonymous" && user.type !== "Bot" )
+            contribs += 1;
+    });
+    data.commits = commits;
+    data.contributors = contribs;
     return data;
 }
 
