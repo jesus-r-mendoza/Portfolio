@@ -6,7 +6,7 @@ class ProjectSection extends React.Component {
     render() {
         return (
             <div id="projects" className="section">
-                <h2>Projects</h2>
+                <h2 className="display-4">Projects</h2>
                 <ProjectList />
                 <div className="d-flex justify-content-center my-5">
                     <a href="https://github.com/jesus-r-mendoza?tab=repositories" target="_blank" rel="noopener noreferrer"

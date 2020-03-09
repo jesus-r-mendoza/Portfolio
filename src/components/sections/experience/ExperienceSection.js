@@ -8,7 +8,7 @@ class ExperienceSection extends React.Component {
     render() {
         return (
             <div id="experience" className="section">
-                <h2>Academic Internship</h2>
+                <h2 className="display-4">Academic Internship</h2>
                 <Overview />
                 <Summaries />
                 <Updates />
