@@ -14,13 +14,17 @@ code {
 }
 
 .section {
-    padding-top: 100px;
-    border-bottom: 2px solid;
+    padding: 100px 10% 40px 10%;
+    border-bottom: 2px solid #fcfcfc;
+    width: 100%;
 }
 
-.content {
-    margin: 0 auto;
-    width: 80%;
+#home {
+    padding-top: 70px;
+}
+
+#experience {
+    background-color: #f5f8fa;
 }
 
 .summary {
@@ -59,8 +63,6 @@ code {
     height: 250px;
     background-color: black;
 }
-
-#home { padding-top: 70px; }
 
 .icon {
     width: 70px;
