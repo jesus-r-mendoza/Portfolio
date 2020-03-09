@@ -4,7 +4,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 function Icons() {
     return (
-        <div className="d-flex justify-content-center my-5">
+        <div className="d-flex justify-content-center w-100">
             <div className="my-5 d-flex justify-content-around align-items-center w-75">
                 <OverlayTrigger placement="top"
                     overlay={ <Tooltip>View my Github projects</Tooltip> }>

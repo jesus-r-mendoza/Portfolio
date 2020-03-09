@@ -96,6 +96,7 @@ function getDataFromRepo(repo, stats) {
     data.url = repo.svn_url;
     data.updated_date = new Date(repo.pushed_at);
     data.updated = data.updated_date.toLocaleDateString('en-US');
+    data.description = repo.description;
     if (!repo.language) {
         try {
             data.language = repo.parent.language;

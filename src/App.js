@@ -5,7 +5,7 @@ import ExperienceSection from './components/sections/experience/ExperienceSectio
 import ProjectSection from './components/sections/projects/ProjectSection';
 import SkillseSection from './components/sections/skills/SkillsSection';
 import CourseworkSection from './components/sections/coursework/CourseworkSection';
-import VoluntterSection from './components/sections/volunteer/VolunteerSection';
+import VolunteerSection from './components/sections/volunteer/VolunteerSection';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <ProjectSection />
         <SkillseSection />
         <CourseworkSection />
-        <VoluntterSection />
+        <VolunteerSection />
       </div>
     </div>
   )
