@@ -4,7 +4,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <div className="project-card">
+            <div className="project-card floating">
                 <h3 className="d-flex justify-content-center align-items-center text-center card-title">{this.props.project.name}</h3>
                 <p>{this.props.project.description}</p>
                 <div className="d-flex flex-column flex-nowrap justify-content-around">

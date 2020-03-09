@@ -81,13 +81,17 @@ code {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+
+}
+
+.floating {
     background-color: #fff;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
     transition: box-shadow .4s, transform .4s;
 }
 
-.project-card:hover {
+.floating:hover {
     box-shadow: 0 30px 40px rgba(0, 0, 0, .4);
     cursor: pointer;
     transform: translateY(-10px);
@@ -159,7 +163,6 @@ nav {
 
 .skill-card {
     width: 30%;
-    border: 2px solid black;
     padding: 2em;
     margin: 1em;
     min-width: 18em;
@@ -173,7 +176,8 @@ nav {
 }
 
 .skill-pill {
-    border: 1px solid red;
+    border-radius: 30px;
     padding: .3em .7em;
-    margin: .5em 1em .5em 0;
+    margin: .6em 1em .6em 0;
+    background-color: #f2f1f0;
 }

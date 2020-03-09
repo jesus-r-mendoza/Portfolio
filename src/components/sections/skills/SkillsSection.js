@@ -19,7 +19,8 @@ class SkillsSection extends React.Component {
                     id: 2,
                     name: "Software Engineering",
                     pills: [
-                        "Django", "React", "MySql", "Docker"
+                        "Django", "React", "MySql", "Docker", "Docker-Compose",
+                        "AWS-EC2", "AWS-RDS", "AWS-S3"
                     ]
                 },
                 {
