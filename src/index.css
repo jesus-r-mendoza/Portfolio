@@ -21,11 +21,51 @@ code {
 
 #home {
     padding-top: 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#details {
+    background-color: #faf5f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5em;
+    width: 90%;
+    height: 30%;
+    margin-bottom: 40px;
+}
+
+#profile-pic {
+    position: relative;
+    left: 8em;
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+    padding-left: 3em;
+    width: 55%;
+    height: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    #profile-pic {
+        width: 0;
+        height: 0;
+    }
+    .intro {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 #experience {
     background-color: #f5f8fa;
 }
+
 
 .summary {
     width: 20em;
@@ -58,12 +98,6 @@ code {
     min-height: 2.3em;
 }
 
-#img {
-    width: 230px;
-    height: 250px;
-    background-color: black;
-}
-
 .icon {
     width: 70px;
     height: 70px;
@@ -79,7 +113,7 @@ code {
     font-size: 60px;
 }
 
-.icon-link, .icon-link:hover {
+.icon-link, .icon-link:hover, .link:hover {
     color: #000;
     text-decoration: none;
     user-select: none;
@@ -118,9 +152,5 @@ nav {
 }
 
 .link:hover {
-    text-decoration: none;
-    user-select: none;
-    outline: none;
-    color: black;
     border-bottom: 2px solid black;
 }
