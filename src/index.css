@@ -154,3 +154,26 @@ nav {
 .link:hover {
     border-bottom: 2px solid black;
 }
+
+/* Skills */
+
+.skill-card {
+    width: 30%;
+    border: 2px solid black;
+    padding: 2em;
+    margin: 1em;
+    min-width: 18em;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+}
+
+.skill-pill {
+    border: 1px solid red;
+    padding: .3em .7em;
+    margin: .5em 1em .5em 0;
+}
