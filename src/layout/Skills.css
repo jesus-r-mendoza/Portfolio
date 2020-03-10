@@ -1,0 +1,20 @@
+.skill-card {
+    width: 30%;
+    padding: 2em;
+    margin: 1em;
+    min-width: 18em;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.skill-pill {
+    border-radius: 30px;
+    padding: .3em .7em;
+    margin: .6em 1em .6em 0;
+    background-color: #f2f1f0;
+}
