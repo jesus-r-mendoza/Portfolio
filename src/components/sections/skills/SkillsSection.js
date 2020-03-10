@@ -31,6 +31,22 @@ class SkillsSection extends React.Component {
                         "Jupyter Notebook", "Pandas", "Numpy", "SciKitLearn",
                         "Keras", "Matplotlib"
                     ]
+                },
+                {
+                    id: 4,
+                    name: "Interpersonal",
+                    pills: [
+                        "Leadership", "Communication", "Critical Thinking",
+                        "Colaborative", "Agile Development Methodologies", "Feedback Responsive",
+                        "Spanish"
+                    ]
+                },
+                {
+                    id: 5,
+                    name: "Environments",
+                    pills: [
+                        "Git", "Github", "Windows", "Linux", "Ubuntu", "WSL"
+                    ]
                 }
             ],
         };
@@ -40,7 +56,7 @@ class SkillsSection extends React.Component {
         return (
             <div id="skills" className="section">
                 <h2 className="display-4">Skills</h2>
-                <div className="d-flex justify-content-start align-items-start flex-wrap">
+                <div className="cards">
                     {this.state.skills.map( (skill) => <SkillCard skill={skill} /> )}
                 </div>
             </div>
