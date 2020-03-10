@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillCard from './SkillCard';
+import '../../../layout/Skills.css';
 
 class SkillsSection extends React.Component {
 

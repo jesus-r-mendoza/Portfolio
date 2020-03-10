@@ -6,12 +6,12 @@ class Header extends React.Component {
             <nav>
                 <div className="nav-content">
                     <div className="links">
-                        <a href="#home" className="link">Home</a>
-                        <a href="#experience" className="link">Experience</a>
-                        <a href="#projects" className="link">Projects</a>
-                        <a href="#skills" className="link">Skills</a>
-                        <a href="#coursework" className="link">Coursework</a>
-                        <a href="#volunteer" className="link">Volunteer</a>
+                        <a href="#home" className="link hide-link-decor">Home</a>
+                        <a href="#experience" className="link hide-link-decor">Experience</a>
+                        <a href="#projects" className="link hide-link-decor">Projects</a>
+                        <a href="#skills" className="link hide-link-decor">Skills</a>
+                        <a href="#coursework" className="link hide-link-decor">Coursework</a>
+                        <a href="#volunteer" className="link hide-link-decor">Volunteer</a>
                     </div>
                 </div>
             </nav>

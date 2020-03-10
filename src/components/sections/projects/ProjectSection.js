@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectList from './ProjectList';
+import '../../../layout/Projects.css';
 
 class ProjectSection extends React.Component {
 
