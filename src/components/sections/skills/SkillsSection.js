@@ -37,7 +37,7 @@ class SkillsSection extends React.Component {
                     name: "Interpersonal",
                     pills: [
                         "Leadership", "Communication", "Critical Thinking",
-                        "Colaborative", "Agile Development Methodologies", "Feedback Responsive",
+                        "Collaborative", "Agile Development Methodologies", "Feedback Responsive",
                         "Spanish"
                     ]
                 },

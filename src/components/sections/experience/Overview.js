@@ -51,9 +51,9 @@ function Overview() {
                 As more and more satellites are launched into orbit, it is important to track of the status of each
                 one. We're developing <strong>ODAS</strong>, with guidance from our <strong>Boeing</strong> liaisons,
                 to function as a central hub which focuses on monitoring the Health and Status of your satellites.
-                <strong>ODAS</strong> does so by analyzing the Health and Status Telemetry for each of your satellites,
+                <strong> ODAS</strong> does so by analyzing the Health and Status Telemetry for each of your satellites,
                 and providing powerful analytical tools, via a user-friendly Web interface, that allows any user or
-                organization to monitor the state of their satellites. From the beginning we designed <strong>ODAS</strong>
+                organization to monitor the state of their satellites. From the beginning we designed <strong>ODAS </strong>
                 to be an <em><strong>Easy-to-Use</strong></em> system that deals with all of the dirty work for you,
                 ranging from Fault Detection using Machine Learning to scalable storage solutions to manage millions
                 of Telemetry data points.

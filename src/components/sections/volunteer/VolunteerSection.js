@@ -26,7 +26,7 @@ class VolunteerSection extends React.Component {
                     bullets: [
                         "Students build robots using Vex parts, including: servos, controllers, and programmable cortexes",
                         "Students Program their robot to behave autonomously and by user-control using the RobotC programming language",
-                        "Compteted in Regional Competitions, placed 13th out of 56 Teams from SoCal"
+                        "Competed in Regional Competitions, placed 13th out of 56 Teams from SoCal"
                     ]
                 },
                 {
@@ -84,7 +84,7 @@ class VolunteerSection extends React.Component {
 
                 <h4 className="my-3">Activities</h4>
                 <p className="lead">
-                    I volunteer with Montclair High School Science Club as Mentor, there we introduce students to various CS related
+                    I volunteer with Montclair High School Science Club as Mentor; there we introduce students to various CS related
                     fields ranging from Programming in Python to competing in Vex Robotics Competitions. Here is an overview
                     of the activities we've partaken in throughout the years I've been helping.
                 </p>
