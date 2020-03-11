@@ -40,7 +40,7 @@ class CourseworkSection extends React.Component {
         return (
             <div id="coursework" className="section">
                 <h2 className="display-4">Related Coursework</h2>
-                <div className="bisect-container">
+                <div className="bisect-container mb-5">
                     <div className="bisection mr-3">
                         <h3 className="mb-3">Awards</h3>
                         <div className="bisect-inner">

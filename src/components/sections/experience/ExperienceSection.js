@@ -12,7 +12,7 @@ class ExperienceSection extends React.Component {
                 <h2 className="display-4">Academic Internship</h2>
                 <Overview />
                 <Summaries />
-                <Updates />
+                {/* <Updates /> */}
             </div>
         )
     }
