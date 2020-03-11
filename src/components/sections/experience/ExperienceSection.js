@@ -1,7 +1,7 @@
 import React from 'react';
 import Overview from './Overview';
 import Summaries from './Summaries';
-import Updates from './Updates';
+// import Updates from './Updates';
 import '../../../layout/Experience.css';
 
 class ExperienceSection extends React.Component {
