@@ -1,0 +1,22 @@
+.bisect-container {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bisection {
+    width: 50%;
+}
+
+.bisect-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.box {
+    padding: 1em;
+    margin: 1em 2em 1em 0;
+    background-color: #f2f1f0;
+}
