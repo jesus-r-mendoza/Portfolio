@@ -1,0 +1,10 @@
+#volunteer {
+    background-color: #f5f8fa;
+}
+
+.title {
+    margin: 3em 0 2em 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
