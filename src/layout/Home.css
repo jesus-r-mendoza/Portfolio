@@ -1,0 +1,55 @@
+#home {
+    padding-top: 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#details {
+    background-color: #faf5f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5em;
+    width: 90%;
+    height: 30%;
+    margin-bottom: 40px;
+}
+
+#profile-pic {
+    position: relative;
+    left: 8em;
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+    padding-left: 3em;
+    width: 55%;
+    height: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    #profile-pic {
+        width: 0;
+        height: 0;
+    }
+    .intro {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    font-size: 50px;
+    text-align: center;
+    transition: font-size .3s;
+}
+
+.icon:hover {
+    font-size: 60px;
+}
