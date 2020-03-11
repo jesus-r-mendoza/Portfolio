@@ -59,7 +59,7 @@ class VolunteerSection extends React.Component {
                 <h4 className="my-3">A little bit about my Experience</h4>
                 <p className="lead">
                     I graduated from <em>Montclair High School</em> in 2016 and am now a Senior at
-                    <em> California State University, Los Angeles</em> about to graduate with a Bachelors of Science
+                    <em> California State University, Los Angeles</em> about to graduate with a Bachelor of Science
                     in Computer Science. As a High School student, I was not sure what I wanted to study, but I was
                     fortunate enough to take numerous Advanced Placement classes in several subjects ranging from
                     AP US History to AP Physics. This allowed me to explore different career opportunities that I could
@@ -68,10 +68,10 @@ class VolunteerSection extends React.Component {
                 <p className="lead">
                     By the end of my Junior, I had become comfortable with the idea of pursuing a degree in some engineering
                     field; despite not having a strong passion for it, I figured I would end up satisfied. However, as I was registering
-                    for my Senior classes, it was anounced that they would be offering AP Computer Science and I signed up for it.
+                    for my Senior classes, it was announced  that they would be offering AP Computer Science and I signed up for it.
                     It was in that year, where I decisively knew that I wanted to pursue a career Computer Science. It is undoubtedly
                     clear that having been exposed to CS during High School, contributed to much of my success and comprehensive
-                    understanding while studing Computer Science in College.
+                    understanding while studying Computer Science in College.
                 </p>
                 <p className="lead">
                     Unfortunately, due to a lack of resources, Montclair High School decided to no longer offer AP Computer Science
@@ -79,7 +79,7 @@ class VolunteerSection extends React.Component {
                     offer or even expose students to Computer Science, serves as an example of the (although improving) lack of
                     diversity in our field. Because of this, I find that the volunteer work I do to support the exposure of
                     Computer Science to these students, is so critical to increase diversity in CS and serve as a mentor for the
-                    future Computer Scienctists from Montclair.
+                    future Computer Scientists from Montclair.
                 </p>
 
                 <h4 className="my-3">Activities</h4>
