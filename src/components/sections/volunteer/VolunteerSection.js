@@ -91,6 +91,9 @@ class VolunteerSection extends React.Component {
                 <div className="d-flex justify-content-between flex-wrap mb-5">
                     {this.state.activities.map( (act) => <Activity activity={act} /> )}
                 </div>
+                <p className="mt-5 text-center">
+                    &copy; 2020, Jesus R Mendoza. All rights reserved.
+                </p>
             </div>
         )
     }
