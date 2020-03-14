@@ -7,6 +7,6 @@
 ## Implementation
 
 - Written in `JavaScript` using `ReactJS`
-- Dynamically adjusting content with `Flexbox`
 - `Projects` section fetches most recent data using the `Github API`
-- Asynchronous `API` calls handled using `ES6 Promises` ( `asyn` & `await` )
+- Asynchronous `API` calls handled using `ES6 Promises` ( `async` & `await` )
+- Dynamically adjusting content with `Flexbox`
