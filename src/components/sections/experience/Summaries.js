@@ -7,8 +7,8 @@ function Summaries() {
                 <h5>Frontend</h5>
                 <p className="lead">
                     <strong>ODAS</strong> is built with modern Frontend frameworks. We're using React JS to
-                    serve as the frontend that handles access and functionality provided by the backend. Since,
-                    our application will require many of the react components to have access to the Backend API's
+                    serve as the frontend that handles access and functionality provided by the backend. Since
+                    our application will require many of the React components access to the Backend API's
                     response, our team is using state management using Redux methodologies.
                 </p>
             </div>
@@ -44,7 +44,7 @@ function Summaries() {
             <div className="summary">
                 <h5>Amazon Web Services</h5>
                 <p className="lead">
-                    In order to complement our containerized application, we're hosting many of our services on AWS. This allows is to provide all
+                    In order to complement our containerized application, we're hosting many of our services on AWS. This allows us to provide all
                     of <strong>ODAS</strong> for free, up until we meet a certain demand, when we can then start scaling by increasing
                     our compute, storage, and database necessities. From AWS, we're using RDS to manage our MySql Database, EC2 for our
                     compute resources which are used by the Docker containers, and S3 Buckets to manage file storage.

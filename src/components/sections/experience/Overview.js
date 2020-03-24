@@ -15,7 +15,7 @@ function Overview() {
                 a centralized application to manage Health and Status Telemetry from satellites.
             </p>
             <p className="lead">
-                I am the Team Leader for this project, and work on several different roles. Here are some of my responsibilities:
+                I am the <strong>Team Leader</strong> for this project, and work on several different roles. Here are some of my responsibilities:
             </p>
             <div className="d-flex justify-content-between mb-4">
                 <div className="w-50 mr-3">
